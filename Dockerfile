@@ -8,4 +8,6 @@ RUN apt update && \
     rm /etc/apt/sources.list.d/spideroak.list && \
     apt clean
 
+COPY entrypoint.sh /entrypoint.sh
 
+ENTRYPOINT ["/entrypoint.sh"]
